@@ -13,5 +13,7 @@ fell freee to reach out
 email: w24133296@gmail.com
 
 pls don' t send useless stuff
+Requires JDK 21
+https://www.oracle.com/java/technologies/downloads/
 
 Made by me and your support
