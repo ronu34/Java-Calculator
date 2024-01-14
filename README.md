@@ -14,4 +14,4 @@ email: w24133296@gmail.com
 
 pls don' t send useless stuff
 
-Made by love from you
+Made by me and your support
