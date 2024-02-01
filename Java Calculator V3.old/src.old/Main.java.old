@@ -1,10 +1,9 @@
-
 import javax.swing.JOptionPane;
 public class Main {
-	static String unit;
+
 	public static void main(String[] args) {
 	    // Input first number
-		JOptionPane.showMessageDialog(null, "Welcome to Java Calcylator V4");
+		JOptionPane.showMessageDialog(null, "Welcome to Java Calcylator V3");
 	    String operation = JOptionPane.showInputDialog(null,"Enter Operation Symbol or name :"); 
 
 
@@ -12,8 +11,8 @@ public class Main {
 	   
 	   switch(operation) {
 	   case "Shapes":
-		   unit = JOptionPane.showInputDialog(null,"What unit do you want");
-		   String areaOperation = JOptionPane.showInputDialog(null,"Enter the name of the shape  :"); 
+		   String unit = JOptionPane.showInputDialog(null,"What unit do you want");
+		   String areaOperation = JOptionPane.showInputDialog(null,"Enter the name of the shape to  find its area :"); 
 		   switch(areaOperation) {
 		   case "Sqaure":
 			   String area_or_perimeter = JOptionPane.showInputDialog(null,"What do you want area or perimeter ?");
@@ -34,7 +33,6 @@ public class Main {
 				 
 				   
 			   }
-			   break;
 		   case "circle":
 			   
 			   double pie = Math.PI;
@@ -51,7 +49,8 @@ public class Main {
 				   break;
 			   }
 			   break;
-			   
+			   default :
+				   JOptionPane.showMessageDialog(null, "Wrong Option" );
 		   case "triangle" :
 			   String which_triangle = JOptionPane.showInputDialog(null,"Which triangle ?");
 			   switch (which_triangle) {
@@ -61,48 +60,14 @@ public class Main {
 				   case "find hyphothenuse" :
 					   double base_of_Righttriangle = Double.parseDouble(JOptionPane.showInputDialog(null,"Enter base length :"));
 					   double height_of_Righttriangle = Double.parseDouble(JOptionPane.showInputDialog(null,"Enter height length :"));
-					   double hypotheuseWhithoutsq = (base_of_Righttriangle*base_of_Righttriangle) + (height_of_Righttriangle * height_of_Righttriangle );
-					   double hypothenuse = Math.sqrt(hypotheuseWhithoutsq);
-					   JOptionPane.showMessageDialog(null, "Hypothenuse is "  +hypothenuse+ unit);
+					   double hypotheuse = (base_of_Righttriangle*base_of_Righttriangle) + (height_of_Righttriangle * height_of_Righttriangle );
+					   JOptionPane.showMessageDialog(null, "Hypothenuse is "  +hypotheuse + unit);
 					   break;
 				   case "find height" :
-					   int OptionToFindHeightRightTriangle =Integer.parseInt(JOptionPane.showInputDialog(null,"Type 1 to find height from pythogras theoram or type 2 to find height from its area"));
-					   if (OptionToFindHeightRightTriangle == 1) {
-						   double HypothenusRightTriangle = Double.parseDouble(JOptionPane.showInputDialog(null,"Enter the hypothenuse:"));
-						   double BaseRightTriangle = Double.parseDouble(JOptionPane.showInputDialog(null,"Enter the Base:"));
-						   double HeightFindByPhythograssTheoramWithoutSq = (HypothenusRightTriangle * HypothenusRightTriangle )-(BaseRightTriangle*BaseRightTriangle);
-						   double HeightFindByPhythograssTheoram = Math.sqrt(HeightFindByPhythograssTheoramWithoutSq);
-						   JOptionPane.showMessageDialog(null, "The Height is "+HeightFindByPhythograssTheoram+" " + unit);
-					   }
-					   else if (OptionToFindHeightRightTriangle == 2) {
-						   double AreaOfRIghtTriangle = Double.parseDouble(JOptionPane.showInputDialog(null,"Enter the area : "));
-						   double BaseRightTri = Double.parseDouble(JOptionPane.showInputDialog(null,"Enter the base :"));
-						   double HeightOfRightTri = AreaOfRIghtTriangle /(BaseRightTri /2);
-						   JOptionPane.showMessageDialog(null, "The height is: "+ HeightOfRightTri+unit);
-					   }
-					   else {
-						   JOptionPane.showMessageDialog(null, "Wrong Option");
-					   }
-					   
+					   JOptionPane.showMessageDialog(null, "Coming Soon !!!!!!!!");
 					   break;
 				   case "find base" :
-					   int OptionToFindBaseRightTriangle =Integer.parseInt(JOptionPane.showInputDialog(null,"Type 1 to find base from pythogras theoram or type 2 to find height from its area"));
-					   if (OptionToFindBaseRightTriangle == 1) {
-						   double HypothenusRightTriangle = Double.parseDouble(JOptionPane.showInputDialog(null,"Enter the hypothenuse:"));
-						   double BaseRightTriangle = Double.parseDouble(JOptionPane.showInputDialog(null,"Enter the Base:"));
-						   double HeightFindByPhythograssTheoramWithoutSq = (HypothenusRightTriangle * HypothenusRightTriangle )-(BaseRightTriangle*BaseRightTriangle);
-						   double HeightFindByPhythograssTheoram = Math.sqrt(HeightFindByPhythograssTheoramWithoutSq);
-						   JOptionPane.showMessageDialog(null, "The Height is "+HeightFindByPhythograssTheoram+" " + unit);
-					   }
-					   else if (OptionToFindBaseRightTriangle == 2) {
-						   double AreaOfRIghtTriangle = Double.parseDouble(JOptionPane.showInputDialog(null,"Enter the area : "));
-						   double HeightRightTri = Double.parseDouble(JOptionPane.showInputDialog(null,"Enter the height :"));
-						   double BaseOfRightTri = AreaOfRIghtTriangle /(HeightRightTri /2);
-						   JOptionPane.showMessageDialog(null, "The height is: "+ BaseOfRightTri+unit);
-					   }
-					   else {
-						   JOptionPane.showMessageDialog(null, "Wrong Option");
-					   }
+					   JOptionPane.showMessageDialog(null, "Coming Soon !!!!!!!!");
 					   break;
 				   case "find perimeter" :
 					   double base_of_Righttriangle_perimeter = Double.parseDouble(JOptionPane.showInputDialog(null,"Enter base length :"));
@@ -112,37 +77,18 @@ public class Main {
 					   JOptionPane.showMessageDialog(null, "Perimeter is "  +perimeter_of_rightAngle + unit);
 					   break;
 				   case "find area" :
-					   double AORTB = Double.parseDouble(JOptionPane.showInputDialog(null,"Enter base:"));
-					   double AORTH = Double.parseDouble(JOptionPane.showInputDialog(null,"Enter Height:"));
-					   double AORTA = AORTB * AORTH /2;
-					   JOptionPane.showMessageDialog(null, "THE area is "+AORTA+" "+unit);
+					   JOptionPane.showMessageDialog(null, "Coming Soon!!!!!!!!!!!!!!1");
 					   break;
 					default :
 						JOptionPane.showMessageDialog(null, "operation not found");
-
-						
-				   }
-				   break;
-			   case "rhombus":
-				   rhombus Rhombus = new rhombus(); 
-				   int optrhom = Integer.parseInt(JOptionPane.showInputDialog(null,"Type 1 for perimeter or 2 for area:"));
-				   if (optrhom == 1) {
-					   Rhombus.perimeter();
-				   }
-				   else if (optrhom == 2) {
-					   Rhombus.area();
-				   }
-				   else {
-					   Rhombus.invalid();
+					   
 				   }
 			   default :
 					JOptionPane.showMessageDialog(null, "operation not found");
 					return;
 			   }
 			   
-			   
 		   }
-		   
 	   case"normal" :
 	        double num1 = Double.parseDouble(JOptionPane.showInputDialog(null,"Enter a number"));
 
